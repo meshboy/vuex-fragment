@@ -17,22 +17,24 @@ export const store = new Vuex.Store({
             return `$ ${state.counter} (dollars)`;
         },
 
-        incrementCounterByTen: function(state) {
+        incrementCounterByTen: function (state) {
             return state.counter + 10;
         }
     },
 
     mutations: {
-        increase: function(state) {
-            state.counter ++;
-        },
-
-        decrement: function(state) {
+        increase: function (state) {
             state.counter++;
         },
 
-        asyncIncrement: function(state, incrementalObject) {
-            const { incrementalValue } = incrementalObject;
+        decrement: function (state) {
+            state.counter++;
+        },
+
+        asyncIncrement: function (state, incrementalObject) {
+            const {
+                incrementalValue
+            } = incrementalObject;
             state.counter += incrementalValue;
         }
     },
@@ -41,19 +43,25 @@ export const store = new Vuex.Store({
         /**
          * destruct the context, get the commit and call on the appropriate mutation
          */
-        increase: function({ commit }) {
+        increase: function ({
+            commit
+        }) {
             commit('increase')
         },
 
-        decrease: function({ commit }) {
+        decrease: function ({
+            commit
+        }) {
             commit('decrement');
         },
 
         /**
          * demonstrate an async task
          */
-        asyncIncrement: function({ commit }, incrementalObject) {
-            setTimeout(function(){
+        asyncIncrement: function ({
+            commit
+        }, incrementalObject) {
+            setTimeout(function () {
                 /**
                  * am done, kindly call appropriate mutation
                  */
