@@ -7,64 +7,61 @@
 </template>
 
 <script>
-import {
-    mapActions
-} from 'vuex';
+import { mapActions } from "vuex";
 export default {
-    name: "app-counter",
-    methods: {
-        // increase() {
-        //   this.$store.state.counter++;
-        // },
-        // decrease() {
-        //   this.$store.state.counter--;
-        // }
+  name: "app-counter",
+  methods: {
+    // increase() {
+    //   this.$store.state.counter++;
+    // },
+    // decrease() {
+    //   this.$store.state.counter--;
+    // }
 
-        // increase() {
-        //   this.$store.commit('increase');
-        // },
+    // increase() {
+    //   this.$store.commit('increase');
+    // },
 
-        // decrease() {
-        //   this.$store.commit('decrement');
-        // }
+    // decrease() {
+    //   this.$store.commit('decrement');
+    // }
 
-        // increase() {
-        //   this.$store.dispatch('increase');
-        // }
-    
-      /**
-       * The map Actions snippet below are the same, es6 came into play 
-       **/
-          //     //this an es6 alternative for increment: 'increment
-        ...mapActions({
-         increase: 'increase',
-         decrease: 'decrease'   
-        }),
-        
-        // to avoid object repetition 
-        // ...mapActions([
-        //     //this an es6 alternative for increment: 'increment'
-        //  'increase',
-        //  'decrease',  
-        // ])
+    // increase() {
+    //   this.$store.dispatch('increase');
+    // }
 
-        asyncIncrease(incrementalValue) {
-          const objectValue = {
-            incrementalValue
-          }
+    /**
+     * The map Actions snippet below are the same, es6 came into play
+     **/
+    //     //this an es6 alternative for increment: 'increment
+    ...mapActions({
+      increase: "increase",
+      decrease: "decrease"
+    }),
 
-          this.$store.dispatch('asyncIncrement', objectValue);
-        }
+    // to avoid object repetition
+    // ...mapActions([
+    //     //this an es6 alternative for increment: 'increment'
+    //  'increase',
+    //  'decrease',
+    // ])
 
-    },
+    asyncIncrease(incrementalValue) {
+      const objectValue = {
+        incrementalValue
+      };
+
+      this.$store.dispatch("asyncIncrement", objectValue);
+    }
+  }
 };
 </script>
 
 <style>
 button {
-    margin: 10px;
-    width: 170px;
-    height: 60px;
-    font-size: 40px;
+  margin: 10px;
+  width: 170px;
+  height: 60px;
+  font-size: 40px;
 }
 </style>
