@@ -11,11 +11,11 @@ import { mapGetters } from "vuex";
 export default {
   name: "appResult",
 
-//   computed: {
-//     counter() {
-//       return this.$store.getters.addCurrencyToCounter;
-//     }
-//   }
+  //   computed: {
+  //     counter() {
+  //       return this.$store.getters.addCurrencyToCounter;
+  //     }
+  //   }
 
   /**
    * map the method(s) in getters to a property
@@ -30,12 +30,12 @@ export default {
    * This is useful when other properties are to be
    * added to computed proptery
    */
-    computed: {
-      ...mapGetters({
-        counter: "addCurrencyToCounter",
-        increment: "incrementCounterByTen"
-      })
-    }
+  computed: {
+    ...mapGetters({
+      counter: "addCurrencyToCounter",
+      increment: "incrementCounterByTen"
+    })
+  }
 };
 </script>
 

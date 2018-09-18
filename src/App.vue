@@ -9,14 +9,14 @@
 </template>
 
 <script>
-  import appCounter from "./components/counter";
-  import appResult from "./components/display";
-  
-  export default {
-    name: "app",
-    components: {
-      appCounter,
-      appResult
-    }
-  };
+import appCounter from "./components/counter";
+import appResult from "./components/display";
+
+export default {
+  name: "app",
+  components: {
+    appCounter,
+    appResult
+  }
+};
 </script>
